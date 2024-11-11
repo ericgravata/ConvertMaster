@@ -591,7 +591,6 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             }
         });
     }
-    //Distribuição de teste
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConverter;
