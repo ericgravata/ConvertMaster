@@ -556,25 +556,33 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         });
         // Configurando o formato de número para o padrão brasileiro
         NumberFormat numberFormat = NumberFormat.getNumberInstance(new Locale("pt", "BR"));
-        numberFormat.setMaximumFractionDigits(2); // Ajusta o número máximo de casas decimais
-        numberFormat.setMinimumFractionDigits(2); // Ajusta o número mínimo de casas decimais
+        numberFormat.setMaximumFractionDigits(2); // Ajusta o número máximo de casas decimais para 2
+        numberFormat.setMinimumFractionDigits(2); // Ajusta o número mínimo de casas decimais para 2
 
+        // Usa SwingUtilities.invokeLater para garantir que a atualização da UI ocorra na thread correta
         SwingUtilities.invokeLater(() -> {
             try {
+                // Obtém o texto do campo de entrada
                 String text = txtEntrada.getText();
-                text = text.replace(".", "").replace(",", ""); // Remover formatação
+                // Remove a formatação existente (pontos e vírgulas)
+                text = text.replace(".", "").replace(",", "");
+                // Verifica se o texto está vazio e define para "0,00" se estiver
                 if (text.isEmpty()) {
                     text = "0,00";
+                // Se o texto tiver apenas 1 caractere, adiciona "0,0" antes do caractere
                 } else if (text.length() == 1) {
                     text = "0,0" + text;
+                // Se o texto tiver 2 caracteres, adiciona "0," antes dos caracteres
                 } else if (text.length() == 2) {
                     text = "0," + text;
+                // Se o texto tiver mais de 2 caracteres, insere uma vírgula antes dos dois últimos caracteres
                 } else {
                     text = text.substring(0, text.length() - 2) + "," + text.substring(text.length() - 2);
                 }
-                double value = Double.parseDouble(text.replace(",", "."));
+                // Converte o texto para um valor double
+                double value = Double.parseDouble(text.replace(",", ".")); // Formata o valor e define o texto do campo de entrada com o valor formatado
                 txtEntrada.setText(numberFormat.format(value));
-            } catch (NumberFormatException | StringIndexOutOfBoundsException ex) {
+            } catch (NumberFormatException | StringIndexOutOfBoundsException ex) { // Em caso de erro, define o texto do campo de entrada para "0,00"
                 txtEntrada.setText("0,00");
             }
         }
@@ -591,7 +599,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             }
         });
     }
- 
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConverter;
