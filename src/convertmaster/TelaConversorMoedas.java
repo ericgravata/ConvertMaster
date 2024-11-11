@@ -579,6 +579,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             }
         }
         );
+        //teste
     }//GEN-LAST:event_txtEntradaKeyTyped
 
     public static void main(String args[]) {
