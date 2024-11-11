@@ -579,7 +579,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             }
         }
         );
-        //Novo Teste
+
     }//GEN-LAST:event_txtEntradaKeyTyped
 
     public static void main(String args[]) {
@@ -591,6 +591,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             }
         });
     }
+    //Distribuição de teste
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConverter;
