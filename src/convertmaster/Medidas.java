@@ -33,22 +33,22 @@ public class Medidas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Milímetro") && combo2.equals("Centímetro")) {
+        if (combo1.contains("Milímetro") && combo2.contains("Centímetro")) {
             double resultado = convertEntrada / variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " cm");
-        } else if (combo1.equals("Milímetro") && combo2.equals("Decímetro")) {
+        } else if (combo1.contains("Milímetro") && combo2.contains("Decímetro")) {
             double resultado = convertEntrada / variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " dm");
-        } else if (combo1.equals("Milímetro") && combo2.equals("Metro")) {
+        } else if (combo1.contains("Milímetro") && combo2.contains("Metro")) {
             double resultado = convertEntrada / variavelConstante[2];
             txtSaida.setText(df.format(resultado) + " m");
-        } else if (combo1.equals("Milímetro") && combo2.equals("Decâmetro")) {
+        } else if (combo1.contains("Milímetro") && combo2.contains("Decâmetro")) {
             double resultado = convertEntrada / variavelConstante[3];
             txtSaida.setText(df.format(resultado) + " dam");
-        } else if (combo1.equals("Milímetro") && combo2.equals("Hectômetro")) {
+        } else if (combo1.contains("Milímetro") && combo2.contains("Hectômetro")) {
             double resultado = convertEntrada / variavelConstante[4];
             txtSaida.setText(df.format(resultado) + " hm");
-        } else if (combo1.equals("Milímetro") && combo2.equals("Quilômetro")) {
+        } else if (combo1.contains("Milímetro") && combo2.contains("Quilômetro")) {
             //NESTE PONTO FOI CRIADO MAIS UMA VARIÁVEL 'df'(Decimal Format) PARA AUMENTAR O NÚMERO DE CASAS DECIMAIS
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#########");
             double resultado = convertEntrada / variavelConstante[5];
@@ -56,7 +56,7 @@ public class Medidas extends javax.swing.JFrame {
         }
         //SAÍDA GERAL PARA OUTRAS MEDIDAS
         //double variavelConstante[] = {10, 100, 1000, 10000, 100000, 1000000}; //(cm, dm, m, dam, hm, km)
-        if (combo2.equals("Centímetro")) {
+        if (combo2.contains("Centímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#########");
             saida1 = ("Em decímetros: " + df.format(convertEntrada / variavelConstante[1]) + " dm");
@@ -65,7 +65,7 @@ public class Medidas extends javax.swing.JFrame {
             saida4 = ("Em hectômetros: " + df.format(convertEntrada / variavelConstante[4]) + " hm");
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[5]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
-        } else if (combo2.equals("Decímetro")) {
+        } else if (combo2.contains("Decímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#########");
             saida1 = ("Em centímetros: " + df.format(convertEntrada / variavelConstante[0]) + " cm");
@@ -75,7 +75,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[5]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Metro")) {
+        if (combo2.contains("Metro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#########");
             saida1 = ("Em centímetros: " + df.format(convertEntrada / variavelConstante[0]) + " cm");
@@ -85,7 +85,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[5]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decâmetro")) {
+        if (combo2.contains("Decâmetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#########");
             saida1 = ("Em centímetros: " + df.format(convertEntrada / variavelConstante[0]) + " cm");
@@ -95,7 +95,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[5]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Hectômetro")) {
+        if (combo2.contains("Hectômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#########");
             saida1 = ("Em centímetros: " + df.format(convertEntrada / variavelConstante[0]) + " cm");
@@ -105,7 +105,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[5]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Quilômetro")) {
+        if (combo2.contains("Quilômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em centímetros: " + df.format(convertEntrada / variavelConstante[0]) + " cm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada / variavelConstante[1]) + " dm");
@@ -128,22 +128,22 @@ public class Medidas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Centímetro") && combo2.equals("Milímetro")) {
+        if (combo1.contains("Centímetro") && combo2.contains("Milímetro")) {
             double resultado = convertEntrada * variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " mm");
-        } else if (combo1.equals("Centímetro") && combo2.equals("Decímetro")) {
+        } else if (combo1.contains("Centímetro") && combo2.contains("Decímetro")) {
             double resultado = convertEntrada / variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " dm");
-        } else if (combo1.equals("Centímetro") && combo2.equals("Metro")) {
+        } else if (combo1.contains("Centímetro") && combo2.contains("Metro")) {
             double resultado = convertEntrada / variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " m");
-        } else if (combo1.equals("Centímetro") && combo2.equals("Decâmetro")) {
+        } else if (combo1.contains("Centímetro") && combo2.contains("Decâmetro")) {
             double resultado = convertEntrada / variavelConstante[2];
             txtSaida.setText(df.format(resultado) + " dam");
-        } else if (combo1.equals("Centímetro") && combo2.equals("Hectômetro")) {
+        } else if (combo1.contains("Centímetro") && combo2.contains("Hectômetro")) {
             double resultado = convertEntrada / variavelConstante[3];
             txtSaida.setText(df.format(resultado) + " hm");
-        } else if (combo1.equals("Centímetro") && combo2.equals("Quilômetro")) {
+        } else if (combo1.contains("Centímetro") && combo2.contains("Quilômetro")) {
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#####");
             double resultado = convertEntrada / variavelConstante[4];
             txtSaida.setText(dfQuilometro.format(resultado) + " km");
@@ -151,7 +151,7 @@ public class Medidas extends javax.swing.JFrame {
 
         //SAÍDA GERAL PARA OUTRAS MEDIDAS
         //double variavelConstante[] = {10, 100, 1000, 10000, 100000}; //(mm, dm, m, dam, hm, km)
-        if (combo2.equals("Milímetro")) {
+        if (combo2.contains("Milímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#####");
             saida1 = ("Em decímetros: " + df.format(convertEntrada / variavelConstante[0]) + " dm");
@@ -160,7 +160,7 @@ public class Medidas extends javax.swing.JFrame {
             saida4 = ("Em hectômetros: " + df.format(convertEntrada / variavelConstante[3]) + " hm");
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[4]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
-        } else if (combo2.equals("Decímetro")) {
+        } else if (combo2.contains("Decímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#####");
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[0]) + " mm");
@@ -170,7 +170,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[4]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Metro")) {
+        if (combo2.contains("Metro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#####");
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[0]) + " mm");
@@ -180,7 +180,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[4]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decâmetro")) {
+        if (combo2.contains("Decâmetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#####");
             saida1 = ("Em milímetro: " + df.format(convertEntrada * variavelConstante[0]) + " mm");
@@ -190,7 +190,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[4]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Hectômetro")) {
+        if (combo2.contains("Hectômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             DecimalFormat dfQuilometro = new DecimalFormat("###,##0.#####");
             saida1 = ("Em milímetro: " + df.format(convertEntrada * variavelConstante[0]) + " mm");
@@ -200,7 +200,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + dfQuilometro.format(convertEntrada / variavelConstante[4]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Quilômetro")) {
+        if (combo2.contains("Quilômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[0]) + " mm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada / variavelConstante[0]) + " dm");
@@ -223,28 +223,28 @@ public class Medidas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Decímetro") && combo2.equals("Milímetro")) {
+        if (combo1.contains("Decímetro") && combo2.contains("Milímetro")) {
             double resultado = convertEntrada * variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " mm");
-        } else if (combo1.equals("Decímetro") && combo2.equals("Centímetro")) {
+        } else if (combo1.contains("Decímetro") && combo2.contains("Centímetro")) {
             double resultado = convertEntrada * variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " cm");
-        } else if (combo1.equals("Decímetro") && combo2.equals("Metro")) {
+        } else if (combo1.contains("Decímetro") && combo2.contains("Metro")) {
             double resultado = convertEntrada / variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " m");
-        } else if (combo1.equals("Decímetro") && combo2.equals("Decâmetro")) {
+        } else if (combo1.contains("Decímetro") && combo2.contains("Decâmetro")) {
             double resultado = convertEntrada / variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " dam");
-        } else if (combo1.equals("Decímetro") && combo2.equals("Hectômetro")) {
+        } else if (combo1.contains("Decímetro") && combo2.contains("Hectômetro")) {
             double resultado = convertEntrada / variavelConstante[2];
             txtSaida.setText(df.format(resultado) + " hm");
-        } else if (combo1.equals("Decímetro") && combo2.equals("Quilômetro")) {
+        } else if (combo1.contains("Decímetro") && combo2.contains("Quilômetro")) {
             double resultado = convertEntrada / variavelConstante[3];
             txtSaida.setText(df.format(resultado) + " km");
         }
         //SAÍDA GERAL PARA OUTRAS MEDIDAS
         //double variavelConstante[] = {10, 100, 1000, 1000}; //(mm, cm == m, dam, hm, km)
-        if (combo2.equals("Milímetro")) {
+        if (combo2.contains("Milímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[0]) + " cm");
             saida2 = ("Em metros: " + df.format(convertEntrada / variavelConstante[0]) + " m");
@@ -252,7 +252,7 @@ public class Medidas extends javax.swing.JFrame {
             saida4 = ("Em hectômetros: " + df.format(convertEntrada / variavelConstante[2]) + " hm");
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[3]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
-        } else if (combo2.equals("Centímetro")) {
+        } else if (combo2.contains("Centímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[1]) + " mm");
             saida2 = ("Em metros: " + df.format(convertEntrada / variavelConstante[0]) + " m");
@@ -261,7 +261,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[3]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Metro")) {
+        if (combo2.contains("Metro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[1]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[0]) + " cm");
@@ -270,7 +270,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[3]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decâmetro")) {
+        if (combo2.contains("Decâmetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetro: " + df.format(convertEntrada * variavelConstante[1]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[0]) + " cm");
@@ -279,7 +279,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[3]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Hectômetro")) {
+        if (combo2.contains("Hectômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[1]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[0]) + " cm");
@@ -288,7 +288,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[3]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Quilômetro")) {
+        if (combo2.contains("Quilômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[1]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[0]) + " cm");
@@ -312,28 +312,28 @@ public class Medidas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Metro") && combo2.equals("Milímetro")) {
+        if (combo1.contains("Metro") && combo2.contains("Milímetro")) {
             double resultado = convertEntrada * variavelConstante[2];
             txtSaida.setText(df.format(resultado) + " mm");
-        } else if (combo1.equals("Metro") && combo2.equals("Centímetro")) {
+        } else if (combo1.contains("Metro") && combo2.contains("Centímetro")) {
             double resultado = convertEntrada * variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " cm");
-        } else if (combo1.equals("Metro") && combo2.equals("Decímetro")) {
+        } else if (combo1.contains("Metro") && combo2.contains("Decímetro")) {
             double resultado = convertEntrada * variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " dm");
-        } else if (combo1.equals("Metro") && combo2.equals("Decâmetro")) {
+        } else if (combo1.contains("Metro") && combo2.contains("Decâmetro")) {
             double resultado = convertEntrada / variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " dam");
-        } else if (combo1.equals("Metro") && combo2.equals("Hectômetro")) {
+        } else if (combo1.contains("Metro") && combo2.contains("Hectômetro")) {
             double resultado = convertEntrada / variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " hm");
-        } else if (combo1.equals("Metro") && combo2.equals("Quilômetro")) {
+        } else if (combo1.contains("Metro") && combo2.contains("Quilômetro")) {
             double resultado = convertEntrada / variavelConstante[2];
             txtSaida.setText(df.format(resultado) + " km");
         }
         //SAÍDA GERAL PARA OUTRAS MEDIDAS
         //double variavelConstante[] = {10, 100, 1000}; //(mm, cm, dm, m, dam, hm, km) = {0, 1, 2}
-        if (combo2.equals("Milímetro")) {
+        if (combo2.contains("Milímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[1]) + " cm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada * variavelConstante[0]) + " dm");
@@ -341,7 +341,7 @@ public class Medidas extends javax.swing.JFrame {
             saida4 = ("Em hectômetros: " + df.format(convertEntrada / variavelConstante[1]) + " hm");
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[2]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
-        } else if (combo2.equals("Centímetro")) {
+        } else if (combo2.contains("Centímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[2]) + " mm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada * variavelConstante[0]) + " dm");
@@ -350,7 +350,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[2]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decímetro")) {
+        if (combo2.contains("Decímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[2]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[1]) + " cm");
@@ -359,7 +359,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[2]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decâmetro")) {
+        if (combo2.contains("Decâmetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetro: " + df.format(convertEntrada * variavelConstante[2]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[1]) + " cm");
@@ -368,7 +368,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[2]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Hectômetro")) {
+        if (combo2.contains("Hectômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[2]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[1]) + " cm");
@@ -377,7 +377,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[2]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Quilômetro")) {
+        if (combo2.contains("Quilômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[2]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[1]) + " cm");
@@ -399,28 +399,28 @@ public class Medidas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Decâmetro") && combo2.equals("Milímetro")) {
+        if (combo1.contains("Decâmetro") && combo2.contains("Milímetro")) {
             double resultado = convertEntrada * variavelConstante[3];
             txtSaida.setText(df.format(resultado) + " mm");
-        } else if (combo1.equals("Decâmetro") && combo2.equals("Centímetro")) {
+        } else if (combo1.contains("Decâmetro") && combo2.contains("Centímetro")) {
             double resultado = convertEntrada * variavelConstante[2];
             txtSaida.setText(df.format(resultado) + " cm");
-        } else if (combo1.equals("Decâmetro") && combo2.equals("Decímetro")) {
+        } else if (combo1.contains("Decâmetro") && combo2.contains("Decímetro")) {
             double resultado = convertEntrada * variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " dm");
-        } else if (combo1.equals("Decâmetro") && combo2.equals("Metro")) {
+        } else if (combo1.contains("Decâmetro") && combo2.contains("Metro")) {
             double resultado = convertEntrada * variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " m");
-        } else if (combo1.equals("Decâmetro") && combo2.equals("Hectômetro")) {
+        } else if (combo1.contains("Decâmetro") && combo2.contains("Hectômetro")) {
             double resultado = convertEntrada / variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " hm");
-        } else if (combo1.equals("Decâmetro") && combo2.equals("Quilômetro")) {
+        } else if (combo1.contains("Decâmetro") && combo2.contains("Quilômetro")) {
             double resultado = convertEntrada / variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " km");
         }
         //SAÍDA GERAL PARA OUTRAS MEDIDAS
         //double variavelConstante[] = {10, 100, 1000, 10000}; //(mm, cm, dm, m, dam, hm, km) = {0, 1, 2, 3}
-        if (combo2.equals("Milímetro")) {
+        if (combo2.contains("Milímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[2]) + " cm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada * variavelConstante[1]) + " dm");
@@ -428,7 +428,7 @@ public class Medidas extends javax.swing.JFrame {
             saida4 = ("Em hectômetros: " + df.format(convertEntrada / variavelConstante[0]) + " hm");
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[1]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
-        } else if (combo2.equals("Centímetro")) {
+        } else if (combo2.contains("Centímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[3]) + " mm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada * variavelConstante[1]) + " dm");
@@ -437,7 +437,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[1]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decímetro")) {
+        if (combo2.contains("Decímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[3]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[2]) + " cm");
@@ -446,7 +446,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[1]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Metro")) {
+        if (combo2.contains("Metro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetro: " + df.format(convertEntrada * variavelConstante[3]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[2]) + " cm");
@@ -455,7 +455,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[1]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Hectômetro")) {
+        if (combo2.contains("Hectômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[3]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[2]) + " cm");
@@ -464,7 +464,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[1]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Quilômetro")) {
+        if (combo2.contains("Quilômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[3]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[2]) + " cm");
@@ -487,29 +487,29 @@ public class Medidas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Hectômetro") && combo2.equals("Milímetro")) {
+        if (combo1.contains("Hectômetro") && combo2.contains("Milímetro")) {
             double resultado = convertEntrada * variavelConstante[4];
             txtSaida.setText(df.format(resultado) + " mm");
-        } else if (combo1.equals("Hectômetro") && combo2.equals("Centímetro")) {
+        } else if (combo1.contains("Hectômetro") && combo2.contains("Centímetro")) {
             double resultado = convertEntrada * variavelConstante[3];
             txtSaida.setText(df.format(resultado) + " cm");
-        } else if (combo1.equals("Hectômetro") && combo2.equals("Decímetro")) {
+        } else if (combo1.contains("Hectômetro") && combo2.contains("Decímetro")) {
             double resultado = convertEntrada * variavelConstante[2];
             txtSaida.setText(df.format(resultado) + " dm");
-        } else if (combo1.equals("Hectômetro") && combo2.equals("Metro")) {
+        } else if (combo1.contains("Hectômetro") && combo2.contains("Metro")) {
             double resultado = convertEntrada * variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " m");
-        } else if (combo1.equals("Hectômetro") && combo2.equals("Decâmetro")) {
+        } else if (combo1.contains("Hectômetro") && combo2.contains("Decâmetro")) {
             double resultado = convertEntrada * variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " dam");
-        } else if (combo1.equals("Hectômetro") && combo2.equals("Quilômetro")) {
+        } else if (combo1.contains("Hectômetro") && combo2.contains("Quilômetro")) {
             double resultado = convertEntrada / variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " km");
         }
 
 //SAÍDA GERAL PARA OUTRAS MEDIDAS
         //double variavelConstante[] = {10, 100, 1000, 10000,100000}; //(mm, cm, dm, m, dam, hm, km) = {0, 1, 2, 3,4}
-        if (combo2.equals("Milímetro")) {
+        if (combo2.contains("Milímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[3]) + " cm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada * variavelConstante[2]) + " dm");
@@ -517,7 +517,7 @@ public class Medidas extends javax.swing.JFrame {
             saida4 = ("Em decâmetro: " + df.format(convertEntrada * variavelConstante[0]) + " dam");
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[0]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
-        } else if (combo2.equals("Centímetro")) {
+        } else if (combo2.contains("Centímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[4]) + " mm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada * variavelConstante[2]) + " dm");
@@ -526,7 +526,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[0]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decímetro")) {
+        if (combo2.contains("Decímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[4]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[3]) + " cm");
@@ -535,7 +535,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[0]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Metro")) {
+        if (combo2.contains("Metro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetro: " + df.format(convertEntrada * variavelConstante[4]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[3]) + " cm");
@@ -544,7 +544,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[0]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decâmetro")) {
+        if (combo2.contains("Decâmetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[4]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[3]) + " cm");
@@ -553,7 +553,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em quilômetros: " + df.format(convertEntrada / variavelConstante[0]) + " km");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Quilômetro")) {
+        if (combo2.contains("Quilômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[4]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[3]) + " cm");
@@ -576,28 +576,28 @@ public class Medidas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Quilômetro") && combo2.equals("Milímetro")) {
+        if (combo1.contains("Quilômetro") && combo2.contains("Milímetro")) {
             double resultado = convertEntrada * variavelConstante[5];
             txtSaida.setText(df.format(resultado) + " mm");
-        } else if (combo1.equals("Quilômetro") && combo2.equals("Centímetro")) {
+        } else if (combo1.contains("Quilômetro") && combo2.contains("Centímetro")) {
             double resultado = convertEntrada * variavelConstante[4];
             txtSaida.setText(df.format(resultado) + " cm");
-        } else if (combo1.equals("Quilômetro") && combo2.equals("Decímetro")) {
+        } else if (combo1.contains("Quilômetro") && combo2.contains("Decímetro")) {
             double resultado = convertEntrada * variavelConstante[3];
             txtSaida.setText(df.format(resultado) + " dm");
-        } else if (combo1.equals("Quilômetro") && combo2.equals("Metro")) {
+        } else if (combo1.contains("Quilômetro") && combo2.contains("Metro")) {
             double resultado = convertEntrada * variavelConstante[2];
             txtSaida.setText(df.format(resultado) + " m");
-        } else if (combo1.equals("Quilômetro") && combo2.equals("Decâmetro")) {
+        } else if (combo1.contains("Quilômetro") && combo2.contains("Decâmetro")) {
             double resultado = convertEntrada * variavelConstante[1];
             txtSaida.setText(df.format(resultado) + " dam");
-        } else if (combo1.equals("Quilômetro") && combo2.equals("Hectômetro")) {
+        } else if (combo1.contains("Quilômetro") && combo2.contains("Hectômetro")) {
             double resultado = convertEntrada * variavelConstante[0];
             txtSaida.setText(df.format(resultado) + " hm");
         }
 //SAÍDA GERAL PARA OUTRAS MEDIDAS
         //double variavelConstante[] = {10, 100, 1000, 10000, 100000, 1000000}; //(mm, cm, dm, m, dam, hm, km) = {0, 1, 2, 3, 4, 5}
-        if (combo2.equals("Milímetro")) {
+        if (combo2.contains("Milímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[4]) + " cm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada * variavelConstante[3]) + " dm");
@@ -605,7 +605,7 @@ public class Medidas extends javax.swing.JFrame {
             saida4 = ("Em decâmetro: " + df.format(convertEntrada * variavelConstante[1]) + " dam");
             saida5 = ("Em hectômetro: " + df.format(convertEntrada * variavelConstante[0]) + " hm");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
-        } else if (combo2.equals("Centímetro")) {
+        } else if (combo2.contains("Centímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[5]) + " mm");
             saida2 = ("Em decímetros: " + df.format(convertEntrada * variavelConstante[3]) + " dm");
@@ -614,7 +614,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em hectômetro: " + df.format(convertEntrada * variavelConstante[0]) + " hm");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decímetro")) {
+        if (combo2.contains("Decímetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[5]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[4]) + " cm");
@@ -623,7 +623,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em hectômetro: " + df.format(convertEntrada * variavelConstante[0]) + " hm");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Metro")) {
+        if (combo2.contains("Metro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetro: " + df.format(convertEntrada * variavelConstante[5]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[4]) + " cm");
@@ -632,7 +632,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em hectômetro: " + df.format(convertEntrada * variavelConstante[0]) + " hm");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Decâmetro")) {
+        if (combo2.contains("Decâmetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[5]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[4]) + " cm");
@@ -641,7 +641,7 @@ public class Medidas extends javax.swing.JFrame {
             saida5 = ("Em hectômetro: " + df.format(convertEntrada * variavelConstante[0]) + " hm");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4 + "\n" + saida5);
         }
-        if (combo2.equals("Hectômetro")) {
+        if (combo2.contains("Hectômetro")) {
             String saida1, saida2, saida3, saida4, saida5;
             saida1 = ("Em milímetros: " + df.format(convertEntrada * variavelConstante[5]) + " mm");
             saida2 = ("Em centímetros: " + df.format(convertEntrada * variavelConstante[4]) + " cm");
@@ -660,31 +660,31 @@ public class Medidas extends javax.swing.JFrame {
         String cbox2 = comboPara.getSelectedItem().toString();
 
 //A VARIÁVEL temp SIGNIFICA QUE RECEBERÁ UM VALOR 'TEMPORÁRIO' PARA SER USADO POSTERIORMENTE        
-        if (cbox1.equals("Milímetro") && cbox2.equals("Centímetro") || cbox1.equals("Milímetro") && cbox2.equals("Decímetro") || cbox1.equals("Milímetro") && cbox2.equals("Metro") || cbox1.equals("Milímetro") && cbox2.equals("Decâmetro") || cbox1.equals("Milímetro") && cbox2.equals("Hectômetro") || cbox1.equals("Milímetro") && cbox2.equals("Quilômetro")) {
+        if (cbox1.contains("Milímetro") && cbox2.contains("Centímetro") || cbox1.contains("Milímetro") && cbox2.contains("Decímetro") || cbox1.contains("Milímetro") && cbox2.contains("Metro") || cbox1.contains("Milímetro") && cbox2.contains("Decâmetro") || cbox1.contains("Milímetro") && cbox2.contains("Hectômetro") || cbox1.contains("Milímetro") && cbox2.contains("Quilômetro")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Centímetro") && cbox2.equals("Milímetro") || cbox1.equals("Centímetro") && cbox2.equals("Decímetro") || cbox1.equals("Centímetro") && cbox2.equals("Metro") || cbox1.equals("Centímetro") && cbox2.equals("Decâmetro") || cbox1.equals("Centímetro") && cbox2.equals("Hectômetro") || cbox1.equals("Centímetro") && cbox2.equals("Quilômetro")) {
+        } else if (cbox1.contains("Centímetro") && cbox2.contains("Milímetro") || cbox1.contains("Centímetro") && cbox2.contains("Decímetro") || cbox1.contains("Centímetro") && cbox2.contains("Metro") || cbox1.contains("Centímetro") && cbox2.contains("Decâmetro") || cbox1.contains("Centímetro") && cbox2.contains("Hectômetro") || cbox1.contains("Centímetro") && cbox2.contains("Quilômetro")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Decímetro") && cbox2.equals("Milímetro") || cbox1.equals("Decímetro") && cbox2.equals("Centímetro") || cbox1.equals("Decímetro") && cbox2.equals("Metro") || cbox1.equals("Decímetro") && cbox2.equals("Decâmetro") || cbox1.equals("Decímetro") && cbox2.equals("Hectômetro") || cbox1.equals("Decímetro") && cbox2.equals("Quilômetro")) {
+        } else if (cbox1.contains("Decímetro") && cbox2.contains("Milímetro") || cbox1.contains("Decímetro") && cbox2.contains("Centímetro") || cbox1.contains("Decímetro") && cbox2.contains("Metro") || cbox1.contains("Decímetro") && cbox2.contains("Decâmetro") || cbox1.contains("Decímetro") && cbox2.contains("Hectômetro") || cbox1.contains("Decímetro") && cbox2.contains("Quilômetro")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Metro") && cbox2.equals("Milímetro") || cbox1.equals("Metro") && cbox2.equals("Centímetro") || cbox1.equals("Metro") && cbox2.equals("Decímetro") || cbox1.equals("Metro") && cbox2.equals("Decâmetro") || cbox1.equals("Metro") && cbox2.equals("Hectômetro") || cbox1.equals("Metro") && cbox2.equals("Quilômetro")) {
+        } else if (cbox1.contains("Metro") && cbox2.contains("Milímetro") || cbox1.contains("Metro") && cbox2.contains("Centímetro") || cbox1.contains("Metro") && cbox2.contains("Decímetro") || cbox1.contains("Metro") && cbox2.contains("Decâmetro") || cbox1.contains("Metro") && cbox2.contains("Hectômetro") || cbox1.contains("Metro") && cbox2.contains("Quilômetro")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Decâmetro") && cbox2.equals("Milímetro") || cbox1.equals("Decâmetro") && cbox2.equals("Centímetro") || cbox1.equals("Decâmetro") && cbox2.equals("Decímetro") || cbox1.equals("Decâmetro") && cbox2.equals("Metro") || cbox1.equals("Decâmetro") && cbox2.equals("Hectômetro") || cbox1.equals("Decâmetro") && cbox2.equals("Quilômetro")) {
+        } else if (cbox1.contains("Decâmetro") && cbox2.contains("Milímetro") || cbox1.contains("Decâmetro") && cbox2.contains("Centímetro") || cbox1.contains("Decâmetro") && cbox2.contains("Decímetro") || cbox1.contains("Decâmetro") && cbox2.contains("Metro") || cbox1.contains("Decâmetro") && cbox2.contains("Hectômetro") || cbox1.contains("Decâmetro") && cbox2.contains("Quilômetro")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Hectômetro") && cbox2.equals("Milímetro") || cbox1.equals("Hectômetro") && cbox2.equals("Centímetro") || cbox1.equals("Hectômetro") && cbox2.equals("Decímetro") || cbox1.equals("Hectômetro") && cbox2.equals("Metro") || cbox1.equals("Hectômetro") && cbox2.equals("Decâmetro") || cbox1.equals("Hectômetro") && cbox2.equals("Quilômetro")) {
+        } else if (cbox1.contains("Hectômetro") && cbox2.contains("Milímetro") || cbox1.contains("Hectômetro") && cbox2.contains("Centímetro") || cbox1.contains("Hectômetro") && cbox2.contains("Decímetro") || cbox1.contains("Hectômetro") && cbox2.contains("Metro") || cbox1.contains("Hectômetro") && cbox2.contains("Decâmetro") || cbox1.contains("Hectômetro") && cbox2.contains("Quilômetro")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Quilômetro") && cbox2.equals("Milímetro") || cbox1.equals("Quilômetro") && cbox2.equals("Centímetro") || cbox1.equals("Quilômetro") && cbox2.equals("Decímetro") || cbox1.equals("Quilômetro") && cbox2.equals("Metro") || cbox1.equals("Quilômetro") && cbox2.equals("Decâmetro") || cbox1.equals("Quilômetro") && cbox2.equals("Hectômetro")) {
+        } else if (cbox1.contains("Quilômetro") && cbox2.contains("Milímetro") || cbox1.contains("Quilômetro") && cbox2.contains("Centímetro") || cbox1.contains("Quilômetro") && cbox2.contains("Decímetro") || cbox1.contains("Quilômetro") && cbox2.contains("Metro") || cbox1.contains("Quilômetro") && cbox2.contains("Decâmetro") || cbox1.contains("Quilômetro") && cbox2.contains("Hectômetro")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
@@ -697,30 +697,30 @@ public class Medidas extends javax.swing.JFrame {
         double entradaZero = (double) decimalF.parse(pegueEntrada).doubleValue();
 
         String combo1 = comboDe.getSelectedItem().toString();
-        if (combo1.equals("Milímetro") && entradaZero > 0) {
+        if (combo1.contains("Milímetro") && entradaZero > 0) {
             milimetros();
-        } else if (combo1.equals("Centímetro") && entradaZero > 0) {
+        } else if (combo1.contains("Centímetro") && entradaZero > 0) {
             centimetros();
         }
-        if (combo1.equals("Decímetro") && entradaZero > 0) {
+        if (combo1.contains("Decímetro") && entradaZero > 0) {
             decimetro();
         }
-        if (combo1.equals("Metro") && entradaZero > 0) {
+        if (combo1.contains("Metro") && entradaZero > 0) {
             metros();
         }
-        if (combo1.equals("Decâmtero") && entradaZero > 0) {
+        if (combo1.contains("Decâmtero") && entradaZero > 0) {
             decametro();
         }
-        if (combo1.equals("Hectômetro") && entradaZero > 0) {
+        if (combo1.contains("Hectômetro") && entradaZero > 0) {
             hectometro();
         }
-        if (combo1.equals("Quilômetro") && entradaZero > 0) {
+        if (combo1.contains("Quilômetro") && entradaZero > 0) {
             quilometro();
         }
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         comboDe = new javax.swing.JComboBox<>();
@@ -837,9 +837,9 @@ public class Medidas extends javax.swing.JFrame {
 
         setSize(new java.awt.Dimension(520, 508));
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void btConverterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConverterActionPerformed
+    private void btConverterActionPerformed(java.awt.event.ActionEvent evt) {                                            
         if (txtEntrada.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Acrescente algum valor na caixa de diálogo 'VALOR DE ENTRADA'.");
         } else {
@@ -876,43 +876,43 @@ public class Medidas extends javax.swing.JFrame {
 
 //CHAMANDO OS MÉTODOS
                 double entradaZero = (double) df.parse(pegueEntrada).doubleValue();
-                if (combo1.equals("Milímetro") && entradaZero > 0) {
+                if (combo1.contains("Milímetro") && entradaZero > 0) {
                     try {
                         milimetros();
                     } catch (ParseException ex) {
                         Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Centímetro") && entradaZero > 0) {
+                } else if (combo1.contains("Centímetro") && entradaZero > 0) {
                     try {
                         centimetros();
                     } catch (ParseException ex) {
                         Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Decímetro") && entradaZero > 0) {
+                } else if (combo1.contains("Decímetro") && entradaZero > 0) {
                     try {
                         decimetro();
                     } catch (ParseException ex) {
                         Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Metro") && entradaZero > 0) {
+                } else if (combo1.contains("Metro") && entradaZero > 0) {
                     try {
                         metros();
                     } catch (ParseException ex) {
                         Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Decâmetro") && entradaZero > 0) {
+                } else if (combo1.contains("Decâmetro") && entradaZero > 0) {
                     try {
                         decametro();
                     } catch (ParseException ex) {
                         Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Hectômetro") && entradaZero > 0) {
+                } else if (combo1.contains("Hectômetro") && entradaZero > 0) {
                     try {
                         hectometro();
                     } catch (ParseException ex) {
                         Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Quilômetro") && entradaZero > 0) {
+                } else if (combo1.contains("Quilômetro") && entradaZero > 0) {
                     try {
                         quilometro();
                     } catch (ParseException ex) {
@@ -923,20 +923,20 @@ public class Medidas extends javax.swing.JFrame {
                 Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }//GEN-LAST:event_btConverterActionPerformed
+    }                                           
 
-    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
+    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {                                         
         txtEntrada.setText("");
         txtSaida.setText("");
         txtRes.setText("");
-    }//GEN-LAST:event_btLimparActionPerformed
+    }                                        
 
-    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
+    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {                                         
         new TelaInicial().setVisible(true);
         dispose();
-    }//GEN-LAST:event_btVoltarActionPerformed
+    }                                        
 
-    private void btInverterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btInverterMouseClicked
+    private void btInverterMouseClicked(java.awt.event.MouseEvent evt) {                                        
         if (txtEntrada.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Acrescente algum valor na caixa de diálogo 'VALOR DE ENTRADA'.");
         } else {
@@ -969,9 +969,9 @@ public class Medidas extends javax.swing.JFrame {
                 Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }//GEN-LAST:event_btInverterMouseClicked
+    }                                       
 
-    private void txtEntradaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEntradaKeyTyped
+    private void txtEntradaKeyTyped(java.awt.event.KeyEvent evt) {                                    
         //Limita a entrada de dados em até 21 caracteres
         if (txtEntrada.getText().length() >= 20) {
             evt.consume();
@@ -1025,7 +1025,7 @@ public class Medidas extends javax.swing.JFrame {
             }
         }
         );
-    }//GEN-LAST:event_txtEntradaKeyTyped
+    }                                   
 
     public static void main(String args[]) {
 
@@ -1036,7 +1036,7 @@ public class Medidas extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton btConverter;
     private javax.swing.JLabel btInverter;
     private javax.swing.JButton btLimpar;
@@ -1054,5 +1054,5 @@ public class Medidas extends javax.swing.JFrame {
     private javax.swing.JTextField txtEntrada;
     private javax.swing.JTextArea txtRes;
     private javax.swing.JTextField txtSaida;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
