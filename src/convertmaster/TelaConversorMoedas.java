@@ -39,53 +39,53 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
 //EXECUÇÃO DO COMANDO
-        if (combo1.equals("Real") && combo2.equals("Dólar")) {
+        if (combo1.contains("Real") && combo2.contains("Dólar")) {
             double resultado = convertEntrada / moedaReal[0];
             txtSaida.setText("USD$ " + df.format(resultado) + "");
-        } else if (combo1.equals("Real") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Real") && combo2.contains("Euro")) {
             double resultado = convertEntrada / moedaReal[1];
             txtSaida.setText("EUR € " + df.format(resultado) + "");
-        } else if (combo1.equals("Real") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Real") && combo2.contains("Libra Esterlina")) {
             double resultado = convertEntrada / moedaReal[2];
             txtSaida.setText("GBP £ " + df.format(resultado) + "");
-        } else if (combo1.equals("Real") && combo2.equals("Peso Argentino")) {
+        } else if (combo1.contains("Real") && combo2.contains("Peso Argentino")) {
             double resultado = convertEntrada / moedaReal[3];
             txtSaida.setText("ARS $ " + df.format(resultado) + "");
-        } else if (combo1.equals("Real") && combo2.equals("Peso Chileno")) {
+        } else if (combo1.contains("Real") && combo2.contains("Peso Chileno")) {
             double resultado = convertEntrada / moedaReal[4];
             txtSaida.setText("CLP $ " + df.format(resultado) + "");
         }
 
 //SAÍDA GERAL PARA A MOEDA REAL
-        if (combo1.equals("Real") && combo2.equals("Dólar")) {
+        if (combo1.contains("Real") && combo2.contains("Dólar")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaReal[1]));
             saida2 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaReal[2]) + "");
             saida3 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaReal[3]) + "");
             saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaReal[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-        } else if (combo1.equals("Real") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Real") && combo2.contains("Euro")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaReal[0]));
             saida2 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaReal[2]));
             saida3 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaReal[3]) + "");
             saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaReal[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-        } else if (combo1.equals("Real") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Real") && combo2.contains("Libra Esterlina")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaReal[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaReal[1]));
             saida3 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaReal[3]) + "");
             saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaReal[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-        } else if (combo1.equals("Real") && combo2.equals("Peso Argentino")) {
+        } else if (combo1.contains("Real") && combo2.contains("Peso Argentino")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaReal[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaReal[1]));
             saida3 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaReal[2]) + "");
             saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaReal[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-        } else if (combo1.equals("Real") && combo2.equals("Peso Chileno")) {
+        } else if (combo1.contains("Real") && combo2.contains("Peso Chileno")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaReal[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaReal[1]));
@@ -111,29 +111,29 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Dólar") && combo2.equals("Real")) {
+        if (combo1.contains("Dólar") && combo2.contains("Real")) {
             double resultado = convertEntrada / moedaDolar[0];
             txtSaida.setText("R$ " + df.format(resultado) + "");
-        } else if (combo1.equals("Dólar") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Dólar") && combo2.contains("Euro")) {
             double resultado = convertEntrada / moedaDolar[1];
             txtSaida.setText("EUR € " + df.format(resultado) + "");
-        } else if (combo1.equals("Dólar") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Dólar") && combo2.contains("Libra Esterlina")) {
             double resultado = convertEntrada / moedaDolar[2];
             txtSaida.setText("GBP £ " + df.format(resultado) + "");
         }
         //SAÍDA GERAL PARA A MOEDA DÓLAR
 
-        if (combo1.equals("Dólar") && combo2.equals("Real")) {
+        if (combo1.contains("Dólar") && combo2.contains("Real")) {
             String saida1, saida2;
             saida1 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaDolar[1]));
             saida2 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaDolar[2]) + "");
             txtRes.setText(saida1 + "\n" + saida2);
-        } else if (combo1.equals("Dólar") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Dólar") && combo2.contains("Euro")) {
             String saida1, saida2;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaDolar[0]));
             saida2 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaDolar[2]));
             txtRes.setText(saida1 + "\n" + saida2);
-        } else if (combo1.equals("Dólar") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Dólar") && combo2.contains("Libra Esterlina")) {
             String saida1, saida2;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaDolar[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaDolar[1]));
@@ -158,29 +158,29 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Euro") && combo2.equals("Real")) {
+        if (combo1.contains("Euro") && combo2.contains("Real")) {
             double resultado = convertEntrada / moedaEuro[0];
             txtSaida.setText("R$ " + df.format(resultado) + "");
-        } else if (combo1.equals("Euro") && combo2.equals("Dólar")) {
+        } else if (combo1.contains("Euro") && combo2.contains("Dólar")) {
             double resultado = convertEntrada / moedaEuro[1];
             txtSaida.setText("USD$ " + df.format(resultado) + "");
-        } else if (combo1.equals("Euro") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Euro") && combo2.contains("Libra Esterlina")) {
             double resultado = convertEntrada / moedaEuro[2];
             txtSaida.setText("GBP £ " + df.format(resultado) + "");
         }
         //SAÍDA GERAL PARA A MOEDA EURO
 
-        if (combo1.equals("Euro") && combo2.equals("Real")) {
+        if (combo1.contains("Euro") && combo2.contains("Real")) {
             String saida1, saida2;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaEuro[1]));
             saida2 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaEuro[2]) + "");
             txtRes.setText(saida1 + "\n" + saida2);
-        } else if (combo1.equals("Euro") && combo2.equals("Dólar")) {
+        } else if (combo1.contains("Euro") && combo2.contains("Dólar")) {
             String saida1, saida2;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaEuro[0]));
             saida2 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaEuro[2]));
             txtRes.setText(saida1 + "\n" + saida2);
-        } else if (combo1.equals("Euro") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Euro") && combo2.contains("Libra Esterlina")) {
             String saida1, saida2;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaEuro[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaEuro[1]));
@@ -205,29 +205,29 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Libra Esterlina") && combo2.equals("Real")) {
+        if (combo1.contains("Libra Esterlina") && combo2.contains("Real")) {
             double resultado = convertEntrada / moedaLibraEster[0];
             txtSaida.setText("R$ " + df.format(resultado) + "");
-        } else if (combo1.equals("Libra Esterlina") && combo2.equals("Dólar")) {
+        } else if (combo1.contains("Libra Esterlina") && combo2.contains("Dólar")) {
             double resultado = convertEntrada / moedaLibraEster[0];
             txtSaida.setText("USD$ " + df.format(resultado) + "");
-        } else if (combo1.equals("Libra Esterlina") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Libra Esterlina") && combo2.contains("Euro")) {
             double resultado = convertEntrada / moedaLibraEster[0];
             txtSaida.setText("EUR € " + df.format(resultado) + "");
         }
 
         //SAÍDA GERAL PARA A MOEDA LIBRA ESTERLINA
-        if (combo1.equals("Libra Esterlina") && combo2.equals("Real")) {
+        if (combo1.contains("Libra Esterlina") && combo2.contains("Real")) {
             String saida1, saida2;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaLibraEster[1]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaLibraEster[2]) + "");
             txtRes.setText(saida1 + "\n" + saida2);
-        } else if (combo1.equals("Libra Esterlina") && combo2.equals("Dólar")) {
+        } else if (combo1.contains("Libra Esterlina") && combo2.contains("Dólar")) {
             String saida1, saida2;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaLibraEster[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaLibraEster[2]));
             txtRes.setText(saida1 + "\n" + saida2);
-        } else if (combo1.equals("Libra Esterlina") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Libra Esterlina") && combo2.contains("Euro")) {
             String saida1, saida2;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaLibraEster[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaLibraEster[1]));
@@ -250,25 +250,25 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Peso Argentino") && combo2.equals("Real")) {
+        if (combo1.contains("Peso Argentino") && combo2.contains("Real")) {
             double resultado = convertEntrada * moedaPesoArgentino[0];
             txtSaida.setText("R$ " + df.format(resultado));
-        } else if (combo1.equals("Peso Argentino") && combo2.equals("Dólar")) {
+        } else if (combo1.contains("Peso Argentino") && combo2.contains("Dólar")) {
             double resultado = convertEntrada * moedaPesoArgentino[1];
             txtSaida.setText("USD$ " + df.format(resultado));
-        } else if (combo1.equals("Peso Argentino") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Peso Argentino") && combo2.contains("Euro")) {
             double resultado = convertEntrada * moedaPesoArgentino[2];
             txtSaida.setText("EUR € " + df.format(resultado));
-        } else if (combo1.equals("Peso Argentino") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Peso Argentino") && combo2.contains("Libra Esterlina")) {
             double resultado = convertEntrada * moedaPesoArgentino[3];
             txtSaida.setText("GBP £ " + df.format(resultado));
-        } else if (combo1.equals("Peso Argentino") && combo2.equals("Peso Chileno ")) {
+        } else if (combo1.contains("Peso Argentino") && combo2.contains("Peso Chileno ")) {
             double resultado = convertEntrada * moedaPesoArgentino[4];
             txtSaida.setText("CLP $ " + df.format(resultado));
         }
 
         // SAÍDA GERAL PARA A MOEDA PESO ARGENTINO
-        if (combo1.equals("Peso Argentino") && combo2.equals("Real")) {
+        if (combo1.contains("Peso Argentino") && combo2.contains("Real")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaPesoArgentino[1]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaPesoArgentino[2]) + "");
@@ -276,7 +276,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
             
-        } else if (combo1.equals("Peso Argentino") && combo2.equals("Dólar")) {
+        } else if (combo1.contains("Peso Argentino") && combo2.contains("Dólar")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaPesoArgentino[2]) + "");
@@ -284,7 +284,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida4 = ("Em Peso Chileno custa: CLP $" + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
             
-        } else if (combo1.equals("Peso Argentino") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Peso Argentino") && combo2.contains("Euro")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaPesoArgentino[1]) + "");
@@ -292,7 +292,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida4 = ("Em Peso Chileno custa: CLP $" + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
             
-        } else if (combo1.equals("Peso Argentino") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Peso Argentino") && combo2.contains("Libra Esterlina")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaPesoArgentino[1]) + "");
@@ -300,7 +300,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida4 = ("Em Peso Chileno custa: CLP $" + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
             
-        } else if (combo1.equals("Peso Argentino") && combo2.equals("Peso Chileno")) {
+        } else if (combo1.contains("Peso Argentino") && combo2.contains("Peso Chileno")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaPesoArgentino[1]) + "");
@@ -326,25 +326,25 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Peso Chielno") && combo2.equals("Real")) {
+        if (combo1.contains("Peso Chielno") && combo2.contains("Real")) {
             double resultado = convertEntrada * moedaChilena[0];
             txtSaida.setText("R$ " + df.format(resultado));
-        } else if (combo1.equals("Peso Chielno") && combo2.equals("Dólar")) {
+        } else if (combo1.contains("Peso Chielno") && combo2.contains("Dólar")) {
             double resultado = convertEntrada * moedaChilena[1];
             txtSaida.setText("USD$ " + df.format(resultado));
-        } else if (combo1.equals("Peso Chielno") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Peso Chielno") && combo2.contains("Euro")) {
             double resultado = convertEntrada * moedaChilena[2];
             txtSaida.setText("EUR € " + df.format(resultado));
-        } else if (combo1.equals("Peso Chielno") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Peso Chielno") && combo2.contains("Libra Esterlina")) {
             double resultado = convertEntrada * moedaChilena[3];
             txtSaida.setText("GBP £ " + df.format(resultado));
-        } else if (combo1.equals("Peso Chielno") && combo2.equals("Peso Argentino")) {
+        } else if (combo1.contains("Peso Chielno") && combo2.contains("Peso Argentino")) {
             double resultado = convertEntrada * moedaChilena[4];
             txtSaida.setText("ARS $ " + df.format(resultado));
         }
 
         // SAÍDA GERAL PARA A MOEDA PESO ARGENTINO
-        if (combo1.equals("Peso Chielno") && combo2.equals("Real")) {
+        if (combo1.contains("Peso Chielno") && combo2.contains("Real")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaChilena[1]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaChilena[2]) + "");
@@ -352,7 +352,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida4 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaChilena[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
             
-        } else if (combo1.equals("Peso Chielno") && combo2.equals("Dólar")) {
+        } else if (combo1.contains("Peso Chielno") && combo2.contains("Dólar")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaChilena[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaChilena[2]) + "");
@@ -360,7 +360,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida4 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaChilena[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
             
-        } else if (combo1.equals("Peso Chielno") && combo2.equals("Euro")) {
+        } else if (combo1.contains("Peso Chielno") && combo2.contains("Euro")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaChilena[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaChilena[1]) + "");
@@ -368,7 +368,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida4 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaChilena[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
             
-        } else if (combo1.equals("Peso Chielno") && combo2.equals("Libra Esterlina")) {
+        } else if (combo1.contains("Peso Chielno") && combo2.contains("Libra Esterlina")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaChilena[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaChilena[1]) + "");
@@ -376,7 +376,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida4 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaChilena[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
             
-        } else if (combo1.equals("Peso Chielno") && combo2.equals("Peso Argentino")) {
+        } else if (combo1.contains("Peso Chielno") && combo2.contains("Peso Argentino")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaChilena[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaChilena[1]) + "");
@@ -395,27 +395,27 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         String cbox2 = comboPara.getSelectedItem().toString();
 
 //A VARIÁVEL temp SIGNIFICA QUE RECEBERÁ UM VALOR 'TEMPORÁRIO' PARA SER USADO POSTERIORMENTE        
-        if (cbox1.equals("Real") && cbox2.equals("Dólar") || cbox1.equals("Real") && cbox2.equals("Euro") || cbox1.equals("Real") && cbox2.equals("Libra Esterlina") || cbox1.equals("Real") && cbox2.equals("Peso Argentino") || cbox1.equals("Real") && cbox2.equals("Peso Chileno")) {
+        if (cbox1.contains("Real") && cbox2.contains("Dólar") || cbox1.contains("Real") && cbox2.contains("Euro") || cbox1.contains("Real") && cbox2.contains("Libra Esterlina") || cbox1.contains("Real") && cbox2.contains("Peso Argentino") || cbox1.contains("Real") && cbox2.contains("Peso Chileno")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Dólar") && cbox2.equals("Real") || cbox1.equals("Dólar") && cbox2.equals("Euro") || cbox1.equals("Dólar") && cbox2.equals("Libra Esterlina") || cbox1.equals("Dólar") && cbox2.equals("Peso Argentino") || cbox1.equals("Dólar") && cbox2.equals("Peso Chileno")) {
+        } else if (cbox1.contains("Dólar") && cbox2.contains("Real") || cbox1.contains("Dólar") && cbox2.contains("Euro") || cbox1.contains("Dólar") && cbox2.contains("Libra Esterlina") || cbox1.contains("Dólar") && cbox2.contains("Peso Argentino") || cbox1.contains("Dólar") && cbox2.contains("Peso Chileno")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Euro") && cbox2.equals("Real") || cbox1.equals("Euro") && cbox2.equals("Dólar") || cbox1.equals("Euro") && cbox2.equals("Libra Esterlina") || cbox1.equals("Euro") && cbox2.equals("Peso Argentino") || cbox1.equals("Euro") && cbox2.equals("Peso Chileno")) {
+        } else if (cbox1.contains("Euro") && cbox2.contains("Real") || cbox1.contains("Euro") && cbox2.contains("Dólar") || cbox1.contains("Euro") && cbox2.contains("Libra Esterlina") || cbox1.contains("Euro") && cbox2.contains("Peso Argentino") || cbox1.contains("Euro") && cbox2.contains("Peso Chileno")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Libra Esterlina") && cbox2.equals("Real") || cbox1.equals("Libra Esterlina") && cbox2.equals("Dólar") || cbox1.equals("Libra Esterlina") && cbox2.equals("Euro") || cbox1.equals("Libra Esterlina") && cbox2.equals("Peso Argentino") || cbox1.equals("Libra Esterlina") && cbox2.equals("Peso Chileno")) {
+        } else if (cbox1.contains("Libra Esterlina") && cbox2.contains("Real") || cbox1.contains("Libra Esterlina") && cbox2.contains("Dólar") || cbox1.contains("Libra Esterlina") && cbox2.contains("Euro") || cbox1.contains("Libra Esterlina") && cbox2.contains("Peso Argentino") || cbox1.contains("Libra Esterlina") && cbox2.contains("Peso Chileno")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Peso Argentino") && cbox2.equals("Real") || cbox1.equals("Peso Argentino") && cbox2.equals("Dólar") || cbox1.equals("Peso Argentino") && cbox2.equals("Euro") || cbox1.equals("Peso Argentino") && cbox2.equals("Libra Esterlina") || cbox1.equals("Peso Argentino") && cbox2.equals("Peso Chileno")) {
+        } else if (cbox1.contains("Peso Argentino") && cbox2.contains("Real") || cbox1.contains("Peso Argentino") && cbox2.contains("Dólar") || cbox1.contains("Peso Argentino") && cbox2.contains("Euro") || cbox1.contains("Peso Argentino") && cbox2.contains("Libra Esterlina") || cbox1.contains("Peso Argentino") && cbox2.contains("Peso Chileno")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Peso Chileno") && cbox2.equals("Real") || cbox1.equals("Peso Chileno") && cbox2.equals("Dólar") || cbox1.equals("Peso Chileno") && cbox2.equals("Euro") || cbox1.equals("Peso Chileno") && cbox2.equals("Libra Esterlina") || cbox1.equals("Peso Chileno") && cbox2.equals("Peso Argentino")) {
+        } else if (cbox1.contains("Peso Chileno") && cbox2.contains("Real") || cbox1.contains("Peso Chileno") && cbox2.contains("Dólar") || cbox1.contains("Peso Chileno") && cbox2.contains("Euro") || cbox1.contains("Peso Chileno") && cbox2.contains("Libra Esterlina") || cbox1.contains("Peso Chileno") && cbox2.contains("Peso Argentino")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
@@ -428,17 +428,17 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double entradaZero = (double) decimalF.parse(pegueEntrada).doubleValue();
         String combo1 = comboDe.getSelectedItem().toString();
-        if (combo1.equals("Real") && entradaZero > 0) {
+        if (combo1.contains("Real") && entradaZero > 0) {
             RealParaOutras();
-        } else if (combo1.equals("Dólar") && entradaZero > 0) {
+        } else if (combo1.contains("Dólar") && entradaZero > 0) {
             DolarToOther();
-        } else if (combo1.equals("Euro") && entradaZero > 0) {
+        } else if (combo1.contains("Euro") && entradaZero > 0) {
             EuroToOther();
-        } else if (combo1.equals("Libra Esterlina") && entradaZero > 0) {
+        } else if (combo1.contains("Libra Esterlina") && entradaZero > 0) {
             LibraEsterToOther();
-        } else if (combo1.equals("Peso Argentino") && entradaZero > 0) {
+        } else if (combo1.contains("Peso Argentino") && entradaZero > 0) {
             PesosArgentinosToOther();
-        } else if (combo1.equals("Peso Chileno") && entradaZero > 0) {
+        } else if (combo1.contains("Peso Chileno") && entradaZero > 0) {
             PesosChilenoParaOutras();
         }
     }
@@ -620,37 +620,37 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 //______________________________________________________________________
 //CHAMANDO OS MÉTODOS DAS FÓRMULAS
                 double entradaZero = (double) decimalF.parse(pegueEntrada).doubleValue();
-                if (combo1.equals("Real") && entradaZero > 0) {
+                if (combo1.contains("Real") && entradaZero > 0) {
                     try {
                         RealParaOutras();
                     } catch (ParseException ex) {
                         Logger.getLogger(TelaConversorMoedas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Dólar") && entradaZero > 0) {
+                } else if (combo1.contains("Dólar") && entradaZero > 0) {
                     try {
                         DolarToOther();
                     } catch (ParseException ex) {
                         Logger.getLogger(TelaConversorMoedas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Euro") && entradaZero > 0) {
+                } else if (combo1.contains("Euro") && entradaZero > 0) {
                     try {
                         EuroToOther();
                     } catch (ParseException ex) {
                         Logger.getLogger(TelaConversorMoedas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Libra Esterlina") && entradaZero > 0) {
+                } else if (combo1.contains("Libra Esterlina") && entradaZero > 0) {
                     try {
                         LibraEsterToOther();
                     } catch (ParseException ex) {
                         Logger.getLogger(TelaConversorMoedas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Peso Argentino") && entradaZero > 0) {
+                } else if (combo1.contains("Peso Argentino") && entradaZero > 0) {
                     try {
                         PesosArgentinosToOther();
                     } catch (ParseException ex) {
                         Logger.getLogger(TelaConversorMoedas.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if (combo1.equals("Peso Chileno") && entradaZero > 0) {
+                } else if (combo1.contains("Peso Chileno") && entradaZero > 0) {
                     try {
                         PesosChilenoParaOutras();
                     } catch (ParseException ex) {
