@@ -38,11 +38,13 @@
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
+          <StringArray count="6">
             <StringItem index="0" value="Real"/>
             <StringItem index="1" value="D&#xf3;lar"/>
             <StringItem index="2" value="Euro"/>
             <StringItem index="3" value="Libra Esterlina"/>
+            <StringItem index="4" value="Peso Argentino"/>
+            <StringItem index="5" value="Peso Chileno"/>
           </StringArray>
         </Property>
       </Properties>
@@ -61,11 +63,13 @@
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
+          <StringArray count="6">
             <StringItem index="0" value="Real"/>
             <StringItem index="1" value="D&#xf3;lar"/>
             <StringItem index="2" value="Euro"/>
             <StringItem index="3" value="Libra Esterlina"/>
+            <StringItem index="4" value="Peso Argentino"/>
+            <StringItem index="5" value="Peso Chileno"/>
           </StringArray>
         </Property>
       </Properties>

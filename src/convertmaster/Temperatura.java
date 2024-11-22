@@ -36,7 +36,7 @@ public class Temperatura extends javax.swing.JFrame {
         DecimalFormat df = new DecimalFormat("###,##0.##", symbol);
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
-
+        
         if (combo1.equals("Celsius") && combo2.equals("Fahrenheit")) {
             //FÓRMULA CELSIUS PARA FAHRENHEIT É: T(°F) = T(°C) * 1,80 + 32
             double resultado = (convertEntrada * (1.8)) + 32;
