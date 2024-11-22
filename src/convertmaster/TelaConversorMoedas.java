@@ -26,7 +26,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 //Atributos (dados das moedas **De Real para Outras)
 //Atualizar valores com base nas cotações dirárias posição dos índices {0,1,2, ...n} = {Dólar, Euro, Libra Esterlina} 
         //COTAÇÕES DIÁRIAS
-        double moedaReal[] = {5.77, 6.27, 7.51, 0.0058, 0.0060};//MOEDAS {DÓLAR, EURO, LIBRA ESTERLINA, PESO ARGENTINO, PESO CHILENO}
+        double moedaReal[] = {5.77, 6.27, 7.51, 0.00579511, 0.00597094};//MOEDAS {DÓLAR, EURO, LIBRA ESTERLINA, PESO ARGENTINO, PESO CHILENO}
 
         String combo1 = comboDe.getSelectedItem().toString();
         String combo2 = comboPara.getSelectedItem().toString();
@@ -35,6 +35,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         DecimalFormatSymbols symbol = new DecimalFormatSymbols(Locale.getDefault());
         symbol.setDecimalSeparator(',');
         DecimalFormat df = new DecimalFormat("###,##0.##", symbol);
+        DecimalFormat df1 = new DecimalFormat("###,##0.#####", symbol);
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
@@ -50,10 +51,10 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             txtSaida.setText("GBP £ " + df.format(resultado) + "");
         } else if (combo1.contains("Real") && combo2.contains("Peso Argentino")) {
             double resultado = convertEntrada / moedaReal[3];
-            txtSaida.setText("ARS $ " + df.format(resultado) + "");
+            txtSaida.setText("ARS $ " + df1.format(resultado) + "");
         } else if (combo1.contains("Real") && combo2.contains("Peso Chileno")) {
             double resultado = convertEntrada / moedaReal[4];
-            txtSaida.setText("CLP $ " + df.format(resultado) + "");
+            txtSaida.setText("CLP $ " + df1.format(resultado) + "");
         }
 
 //SAÍDA GERAL PARA A MOEDA REAL
@@ -61,36 +62,36 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaReal[1]));
             saida2 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaReal[2]) + "");
-            saida3 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaReal[3]) + "");
-            saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaReal[4]) + "");
+            saida3 = ("Em Peso Argentino custa: ARS $ " + df1.format(convertEntrada / moedaReal[3]) + "");
+            saida4 = ("Em Peso Chileno custa: CLP $ " + df1.format(convertEntrada / moedaReal[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
         } else if (combo1.contains("Real") && combo2.contains("Euro")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaReal[0]));
             saida2 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaReal[2]));
-            saida3 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaReal[3]) + "");
-            saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaReal[4]) + "");
+            saida3 = ("Em Peso Argentino custa: ARS $ " + df1.format(convertEntrada / moedaReal[3]) + "");
+            saida4 = ("Em Peso Chileno custa: CLP $ " + df1.format(convertEntrada / moedaReal[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
         } else if (combo1.contains("Real") && combo2.contains("Libra Esterlina")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaReal[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaReal[1]));
-            saida3 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaReal[3]) + "");
-            saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaReal[4]) + "");
+            saida3 = ("Em Peso Argentino custa: ARS $ " + df1.format(convertEntrada / moedaReal[3]) + "");
+            saida4 = ("Em Peso Chileno custa: CLP $ " + df1.format(convertEntrada / moedaReal[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
         } else if (combo1.contains("Real") && combo2.contains("Peso Argentino")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaReal[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaReal[1]));
             saida3 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaReal[2]) + "");
-            saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaReal[4]) + "");
+            saida4 = ("Em Peso Chileno custa: CLP $ " + df1.format(convertEntrada / moedaReal[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
         } else if (combo1.contains("Real") && combo2.contains("Peso Chileno")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaReal[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaReal[1]));
-            saida3 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaReal[3]) + "");
-            saida4 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaReal[2]) + "");
+            saida3 = ("Em Libra Esterlina custa: GBP £ " + df.format(convertEntrada / moedaReal[2]) + "");
+            saida4 = ("Em Peso Argentino custa: ARS $ " + df1.format(convertEntrada / moedaReal[3]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
         }
     }
@@ -246,7 +247,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 
         DecimalFormatSymbols symbol = new DecimalFormatSymbols(Locale.getDefault());
         symbol.setDecimalSeparator(',');
-        DecimalFormat df = new DecimalFormat("###,##0.##", symbol);
+        DecimalFormat df = new DecimalFormat("###,##0.#####", symbol);
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
@@ -275,7 +276,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaPesoArgentino[3]) + "");
             saida4 = ("Em Peso Chileno custa: CLP $ " + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-            
+
         } else if (combo1.contains("Peso Argentino") && combo2.contains("Dólar")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
@@ -283,7 +284,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaPesoArgentino[3]) + "");
             saida4 = ("Em Peso Chileno custa: CLP $" + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-            
+
         } else if (combo1.contains("Peso Argentino") && combo2.contains("Euro")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
@@ -291,7 +292,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaPesoArgentino[3]) + "");
             saida4 = ("Em Peso Chileno custa: CLP $" + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-            
+
         } else if (combo1.contains("Peso Argentino") && combo2.contains("Libra Esterlina")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
@@ -299,7 +300,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
             saida3 = ("Em Euros custa: EUR €  " + df.format(convertEntrada / moedaPesoArgentino[2]) + "");
             saida4 = ("Em Peso Chileno custa: CLP $" + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-            
+
         } else if (combo1.contains("Peso Argentino") && combo2.contains("Peso Chileno")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
@@ -322,61 +323,61 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 
         DecimalFormatSymbols symbol = new DecimalFormatSymbols(Locale.getDefault());
         symbol.setDecimalSeparator(',');
-        DecimalFormat df = new DecimalFormat("###,##0.##", symbol);
+        DecimalFormat df = new DecimalFormat("###,##0.#####", symbol);
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.contains("Peso Chielno") && combo2.contains("Real")) {
+        if (combo1.contains("Peso Chileno") && combo2.contains("Real")) {
             double resultado = convertEntrada * moedaChilena[0];
             txtSaida.setText("R$ " + df.format(resultado));
-        } else if (combo1.contains("Peso Chielno") && combo2.contains("Dólar")) {
+        } else if (combo1.contains("Peso Chileno") && combo2.contains("Dólar")) {
             double resultado = convertEntrada * moedaChilena[1];
             txtSaida.setText("USD$ " + df.format(resultado));
-        } else if (combo1.contains("Peso Chielno") && combo2.contains("Euro")) {
+        } else if (combo1.contains("Peso Chileno") && combo2.contains("Euro")) {
             double resultado = convertEntrada * moedaChilena[2];
             txtSaida.setText("EUR € " + df.format(resultado));
-        } else if (combo1.contains("Peso Chielno") && combo2.contains("Libra Esterlina")) {
+        } else if (combo1.contains("Peso Chileno") && combo2.contains("Libra Esterlina")) {
             double resultado = convertEntrada * moedaChilena[3];
             txtSaida.setText("GBP £ " + df.format(resultado));
-        } else if (combo1.contains("Peso Chielno") && combo2.contains("Peso Argentino")) {
+        } else if (combo1.contains("Peso Chileno") && combo2.contains("Peso Argentino")) {
             double resultado = convertEntrada * moedaChilena[4];
             txtSaida.setText("ARS $ " + df.format(resultado));
         }
 
         // SAÍDA GERAL PARA A MOEDA PESO ARGENTINO
-        if (combo1.contains("Peso Chielno") && combo2.contains("Real")) {
+        if (combo1.contains("Peso Chileno") && combo2.contains("Real")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaChilena[1]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaChilena[2]) + "");
             saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaChilena[3]) + "");
             saida4 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaChilena[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-            
-        } else if (combo1.contains("Peso Chielno") && combo2.contains("Dólar")) {
+
+        } else if (combo1.contains("Peso Chileno") && combo2.contains("Dólar")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaChilena[0]));
             saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaChilena[2]) + "");
             saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaChilena[3]) + "");
             saida4 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaChilena[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-            
-        } else if (combo1.contains("Peso Chielno") && combo2.contains("Euro")) {
+
+        } else if (combo1.contains("Peso Chileno") && combo2.contains("Euro")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaChilena[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaChilena[1]) + "");
             saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaChilena[3]) + "");
             saida4 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaChilena[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-            
-        } else if (combo1.contains("Peso Chielno") && combo2.contains("Libra Esterlina")) {
+
+        } else if (combo1.contains("Peso Chileno") && combo2.contains("Libra Esterlina")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaChilena[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaChilena[1]) + "");
             saida3 = ("Em Euros custa: EUR €  " + df.format(convertEntrada / moedaChilena[2]) + "");
             saida4 = ("Em Peso Argentino custa: ARS $ " + df.format(convertEntrada / moedaChilena[4]) + "");
             txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
-            
-        } else if (combo1.contains("Peso Chielno") && combo2.contains("Peso Argentino")) {
+
+        } else if (combo1.contains("Peso Chileno") && combo2.contains("Peso Argentino")) {
             String saida1, saida2, saida3, saida4;
             saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaChilena[0]));
             saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaChilena[1]) + "");
