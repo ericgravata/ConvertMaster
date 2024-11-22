@@ -252,19 +252,19 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 
         if (combo1.equals("Peso Argentino") && combo2.equals("Real")) {
             double resultado = convertEntrada * moedaPesoArgentino[0];
-            txtRes.setText("R$ " + df.format(resultado));
+            txtSaida.setText("R$ " + df.format(resultado));
         } else if (combo1.equals("Peso Argentino") && combo2.equals("Dólar")) {
             double resultado = convertEntrada * moedaPesoArgentino[1];
-            txtRes.setText("USD$ " + df.format(resultado));
+            txtSaida.setText("USD$ " + df.format(resultado));
         } else if (combo1.equals("Peso Argentino") && combo2.equals("Euro")) {
             double resultado = convertEntrada * moedaPesoArgentino[2];
-            txtRes.setText("EUR € " + df.format(resultado));
+            txtSaida.setText("EUR € " + df.format(resultado));
         } else if (combo1.equals("Peso Argentino") && combo2.equals("Libra Esterlina")) {
             double resultado = convertEntrada * moedaPesoArgentino[3];
-            txtRes.setText("GBP £ " + df.format(resultado));
+            txtSaida.setText("GBP £ " + df.format(resultado));
         } else if (combo1.equals("Peso Argentino") && combo2.equals("Peso Chileno ")) {
             double resultado = convertEntrada * moedaPesoArgentino[4];
-            txtRes.setText("CLP $ " + df.format(resultado));
+            txtSaida.setText("CLP $ " + df.format(resultado));
         }
 
         // SAÍDA GERAL PARA A MOEDA PESO ARGENTINO
@@ -328,19 +328,19 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 
         if (combo1.equals("Peso Chielno") && combo2.equals("Real")) {
             double resultado = convertEntrada * moedaChilena[0];
-            txtRes.setText("R$ " + df.format(resultado));
+            txtSaida.setText("R$ " + df.format(resultado));
         } else if (combo1.equals("Peso Chielno") && combo2.equals("Dólar")) {
             double resultado = convertEntrada * moedaChilena[1];
-            txtRes.setText("USD$ " + df.format(resultado));
+            txtSaida.setText("USD$ " + df.format(resultado));
         } else if (combo1.equals("Peso Chielno") && combo2.equals("Euro")) {
             double resultado = convertEntrada * moedaChilena[2];
-            txtRes.setText("EUR € " + df.format(resultado));
+            txtSaida.setText("EUR € " + df.format(resultado));
         } else if (combo1.equals("Peso Chielno") && combo2.equals("Libra Esterlina")) {
             double resultado = convertEntrada * moedaChilena[3];
-            txtRes.setText("GBP £ " + df.format(resultado));
+            txtSaida.setText("GBP £ " + df.format(resultado));
         } else if (combo1.equals("Peso Chielno") && combo2.equals("Peso Argentino")) {
             double resultado = convertEntrada * moedaChilena[4];
-            txtRes.setText("ARS $ " + df.format(resultado));
+            txtSaida.setText("ARS $ " + df.format(resultado));
         }
 
         // SAÍDA GERAL PARA A MOEDA PESO ARGENTINO
@@ -437,9 +437,9 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         } else if (combo1.equals("Libra Esterlina") && entradaZero > 0) {
             LibraEsterToOther();
         } else if (combo1.equals("Peso Argentino") && entradaZero > 0) {
-            LibraEsterToOther();
+            PesosArgentinosToOther();
         } else if (combo1.equals("Peso Chileno") && entradaZero > 0) {
-            LibraEsterToOther();
+            PesosChilenoParaOutras();
         }
     }
 
@@ -473,11 +473,11 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         comboDe.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        comboDe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Real", "Dólar", "Euro", "Libra Esterlina" }));
+        comboDe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Real", "Dólar", "Euro", "Libra Esterlina", "Peso Argentino", "Peso Chileno" }));
         getContentPane().add(comboDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 150, 30));
 
         comboPara.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        comboPara.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Real", "Dólar", "Euro", "Libra Esterlina" }));
+        comboPara.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Real", "Dólar", "Euro", "Libra Esterlina", "Peso Argentino", "Peso Chileno" }));
         comboPara.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboParaActionPerformed(evt);
