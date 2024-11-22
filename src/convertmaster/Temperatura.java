@@ -201,11 +201,11 @@ public class Temperatura extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         comboDe.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        comboDe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius", "Fahrenheit", "Kelvin" }));
+        comboDe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius (°C)", "Fahrenheit (°F)", "Kelvin (K)" }));
         getContentPane().add(comboDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 150, 30));
 
         comboPara.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        comboPara.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius", "Fahrenheit", "Kelvin" }));
+        comboPara.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius (°C)", "Fahrenheit (°F)", "Kelvin (K)" }));
         getContentPane().add(comboPara, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 150, 30));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

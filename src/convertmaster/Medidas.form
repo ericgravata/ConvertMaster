@@ -30,15 +30,14 @@
     <Component class="javax.swing.JComboBox" name="comboDe">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="8">
-            <StringItem index="0" value="Mil&#xed;metro"/>
-            <StringItem index="1" value="Cent&#xed;metro"/>
-            <StringItem index="2" value="Dec&#xed;metro"/>
-            <StringItem index="3" value="Metro"/>
-            <StringItem index="4" value="Dec&#xe2;metro"/>
-            <StringItem index="5" value="Hect&#xf4;metro"/>
-            <StringItem index="6" value="Quil&#xf4;metro"/>
-            <StringItem index="7" value=" "/>
+          <StringArray count="7">
+            <StringItem index="0" value="Mil&#xed;metro (mm)"/>
+            <StringItem index="1" value="Cent&#xed;metro (cm)"/>
+            <StringItem index="2" value="Dec&#xed;metro (dm)"/>
+            <StringItem index="3" value="Metro (m)"/>
+            <StringItem index="4" value="Dec&#xe2;metro (dam)"/>
+            <StringItem index="5" value="Hect&#xf4;metro (hm)"/>
+            <StringItem index="6" value="Quil&#xf4;metro (km)"/>
           </StringArray>
         </Property>
       </Properties>
@@ -55,13 +54,13 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="7">
-            <StringItem index="0" value="Mil&#xed;metro"/>
-            <StringItem index="1" value="Cent&#xed;metro"/>
-            <StringItem index="2" value="Dec&#xed;metro"/>
-            <StringItem index="3" value="Metro"/>
-            <StringItem index="4" value="Dec&#xe2;metro"/>
-            <StringItem index="5" value="Hect&#xf4;metro"/>
-            <StringItem index="6" value="Quil&#xf4;metro"/>
+            <StringItem index="0" value="Mil&#xed;metro (mm)"/>
+            <StringItem index="1" value="Cent&#xed;metro (cm)"/>
+            <StringItem index="2" value="Dec&#xed;metro (dm)"/>
+            <StringItem index="3" value="Metro (m)"/>
+            <StringItem index="4" value="Dec&#xe2;metro (dam)"/>
+            <StringItem index="5" value="Hect&#xf4;metro (hm)"/>
+            <StringItem index="6" value="Quil&#xf4;metro (km)"/>
           </StringArray>
         </Property>
       </Properties>

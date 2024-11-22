@@ -720,7 +720,7 @@ public class Medidas extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         comboDe = new javax.swing.JComboBox<>();
@@ -745,10 +745,10 @@ public class Medidas extends javax.swing.JFrame {
         setTitle("ConvertMaster - Medidas");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        comboDe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Milímetro", "Centímetro", "Decímetro", "Metro", "Decâmetro", "Hectômetro", "Quilômetro", " " }));
+        comboDe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Milímetro (mm)", "Centímetro (cm)", "Decímetro (dm)", "Metro (m)", "Decâmetro (dam)", "Hectômetro (hm)", "Quilômetro (km)" }));
         getContentPane().add(comboDe, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 150, 30));
 
-        comboPara.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Milímetro", "Centímetro", "Decímetro", "Metro", "Decâmetro", "Hectômetro", "Quilômetro" }));
+        comboPara.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Milímetro (mm)", "Centímetro (cm)", "Decímetro (dm)", "Metro (m)", "Decâmetro (dam)", "Hectômetro (hm)", "Quilômetro (km)" }));
         getContentPane().add(comboPara, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 150, 30));
 
         jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
@@ -837,9 +837,9 @@ public class Medidas extends javax.swing.JFrame {
 
         setSize(new java.awt.Dimension(520, 508));
         setLocationRelativeTo(null);
-    }// </editor-fold>                        
+    }// </editor-fold>//GEN-END:initComponents
 
-    private void btConverterActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    private void btConverterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConverterActionPerformed
         if (txtEntrada.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Acrescente algum valor na caixa de diálogo 'VALOR DE ENTRADA'.");
         } else {
@@ -923,20 +923,20 @@ public class Medidas extends javax.swing.JFrame {
                 Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }                                           
+    }//GEN-LAST:event_btConverterActionPerformed
 
-    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         txtEntrada.setText("");
         txtSaida.setText("");
         txtRes.setText("");
-    }                                        
+    }//GEN-LAST:event_btLimparActionPerformed
 
-    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void btVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVoltarActionPerformed
         new TelaInicial().setVisible(true);
         dispose();
-    }                                        
+    }//GEN-LAST:event_btVoltarActionPerformed
 
-    private void btInverterMouseClicked(java.awt.event.MouseEvent evt) {                                        
+    private void btInverterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btInverterMouseClicked
         if (txtEntrada.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Acrescente algum valor na caixa de diálogo 'VALOR DE ENTRADA'.");
         } else {
@@ -969,9 +969,9 @@ public class Medidas extends javax.swing.JFrame {
                 Logger.getLogger(Medidas.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }                                       
+    }//GEN-LAST:event_btInverterMouseClicked
 
-    private void txtEntradaKeyTyped(java.awt.event.KeyEvent evt) {                                    
+    private void txtEntradaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEntradaKeyTyped
         //Limita a entrada de dados em até 21 caracteres
         if (txtEntrada.getText().length() >= 20) {
             evt.consume();
@@ -1025,7 +1025,7 @@ public class Medidas extends javax.swing.JFrame {
             }
         }
         );
-    }                                   
+    }//GEN-LAST:event_txtEntradaKeyTyped
 
     public static void main(String args[]) {
 
@@ -1036,7 +1036,7 @@ public class Medidas extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify                     
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btConverter;
     private javax.swing.JLabel btInverter;
     private javax.swing.JButton btLimpar;
@@ -1054,5 +1054,5 @@ public class Medidas extends javax.swing.JFrame {
     private javax.swing.JTextField txtEntrada;
     private javax.swing.JTextArea txtRes;
     private javax.swing.JTextField txtSaida;
-    // End of variables declaration                   
+    // End of variables declaration//GEN-END:variables
 }
