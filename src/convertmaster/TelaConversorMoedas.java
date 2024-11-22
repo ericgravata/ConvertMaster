@@ -221,6 +221,77 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         }
 
     }
+    //MÉTODO DE CONVERSÃO DA MOEDA PESO ARGENTINO PARA OUTRAS MOEDAS *****    
+    
+        private void PesosArgentinosToOther() throws ParseException {
+        // Atributos (dados das moedas)
+        double moedaPesoArgentino[] = {0.0058, 0.00100, 0.00095, 0.00079, 0.00098}; // //MOEDAS {REAL, DÓLAR, EURO, LIBRA ESTERLINA, PESO CHILENO}
+
+        String combo1 = comboDe.getSelectedItem().toString();
+        String combo2 = comboPara.getSelectedItem().toString();
+
+        DecimalFormatSymbols symbol = new DecimalFormatSymbols(Locale.getDefault());
+        symbol.setDecimalSeparator(',');
+        DecimalFormat df = new DecimalFormat("###,##0.##", symbol);
+        String pegueEntrada = txtEntrada.getText();
+        double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
+
+        if (combo1.equals("Peso Argentino") && combo2.equals("Real")) {
+            double resultado = convertEntrada * moedaPesoArgentino[0];
+            txtRes.setText("R$ " + df.format(resultado));
+        } else if (combo1.equals("Peso Argentino") && combo2.equals("Dólar")) {
+            double resultado = convertEntrada * moedaPesoArgentino[1];
+            txtRes.setText("USD$ " + df.format(resultado));
+        } else if (combo1.equals("Peso Argentino") && combo2.equals("Euro")) {
+            double resultado = convertEntrada * moedaPesoArgentino[2];
+            txtRes.setText("EUR € " + df.format(resultado));
+        } else if (combo1.equals("Peso Argentino") && combo2.equals("Libra Esterlina")) {
+            double resultado = convertEntrada * moedaPesoArgentino[3];
+            txtRes.setText("GBP £ " + df.format(resultado));
+        } else if (combo1.equals("Peso Argentino") && combo2.equals("Peso Chileno ")) {
+            double resultado = convertEntrada * moedaPesoArgentino[4];
+            txtRes.setText("CLP$ " + df.format(resultado));
+        }
+
+        // SAÍDA GERAL PARA A MOEDA PESO ARGENTINO
+        if (combo1.equals("Peso Argentino") && combo2.equals("Real")) {
+            String saida1, saida2, saida3, saida4;
+            saida1 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaPesoArgentino[1]));
+            saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaPesoArgentino[2]) + "");
+            saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaPesoArgentino[3]) + "");
+            saida4 = ("Em Peso Chileno custa: CLP$ " + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
+            txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
+        } else if (combo1.equals("Peso Argentino") && combo2.equals("Dólar")) {
+            String saida1, saida2, saida3, saida4;
+            saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
+            saida2 = ("Em Euros custa: EUR € " + df.format(convertEntrada / moedaPesoArgentino[2]) + "");
+            saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaPesoArgentino[3]) + "");
+            saida4 = ("Em Peso Chileno custa: CLP$" + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
+            txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
+        } else if (combo1.equals("Peso Argentino") && combo2.equals("Euro")) {
+            String saida1, saida2, saida3, saida4;
+            saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
+            saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaPesoArgentino[1]) + "");
+            saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaPesoArgentino[3]) + "");
+            saida4 = ("Em Peso Chileno custa: CLP$" + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
+            txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
+        } else if (combo1.equals("Peso Argentino") && combo2.equals("Libra Esterlina")) {
+            String saida1, saida2, saida3, saida4;
+            saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
+            saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaPesoArgentino[1]) + "");
+            saida3 = ("Em Euros custa: EUR €  " + df.format(convertEntrada / moedaPesoArgentino[2]) + "");
+            saida4 = ("Em Peso Chileno custa: CLP$" + df.format(convertEntrada / moedaPesoArgentino[4]) + "");
+            txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
+        } else if (combo1.equals("Peso Argentino") && combo2.equals("Peso Chileno")) {
+            String saida1, saida2, saida3, saida4;
+            saida1 = ("Em Reais custa: R$ " + df.format(convertEntrada / moedaPesoArgentino[0]));
+            saida2 = ("Em Dólares custa: USD$ " + df.format(convertEntrada / moedaPesoArgentino[1]) + "");
+            saida3 = ("Em Libra Esterlina custa: GBP £  " + df.format(convertEntrada / moedaPesoArgentino[3]) + "");
+            saida4 = ("Em Euros custa: EUR €" + df.format(convertEntrada / moedaPesoArgentino[2]) + "");
+            txtRes.setText(saida1 + "\n" + saida2 + "\n" + saida3 + "\n" + saida4);
+
+        }
+    }
 //__________________________________________________________________________    
 //MÉTODO DO BOTÃO DE INVERTER *****      
 
