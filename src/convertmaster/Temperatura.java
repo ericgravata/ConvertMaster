@@ -37,24 +37,24 @@ public class Temperatura extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
         
-        if (combo1.equals("Celsius") && combo2.equals("Fahrenheit")) {
+        if (combo1.contains("Celsius") && combo2.contains("Fahrenheit")) {
             //FÓRMULA CELSIUS PARA FAHRENHEIT É: T(°F) = T(°C) * 1,80 + 32
             double resultado = (convertEntrada * (1.8)) + 32;
             txtSaida.setText(df.format(resultado) + " °F");
-        } else if (combo1.equals("Celsius") && combo2.equals("Kelvin")) {
+        } else if (combo1.contains("Celsius") && combo2.contains("Kelvin")) {
             //FÓRMULA CELSIUS PARA KELVIN É: T(k) = T(°C) + 273,15
             double resultado = (convertEntrada + constantCelsius);
             txtSaida.setText(df.format(resultado) + " °K");
         }
 
         //SAÍDA GERAL PARA AS OUTRAS TEMPERATURAS         
-        if (combo2.equals("Fahrenheit")) {
+        if (combo2.contains("Fahrenheit")) {
             //MOSTRA-ME O RESULTADO EM KELVIN
             double resultado = (convertEntrada + constantCelsius);
             String saida1;
             saida1 = ("Em Kelvin: " + df.format(resultado) + " °K");
             txtRes.setText(saida1 + "\n");
-        } else if (combo2.equals("Kelvin")) {
+        } else if (combo2.contains("Kelvin")) {
             //MOSTRA-ME O RESULTADO EM FAHRENHEIT
             double resultado = (convertEntrada * (1.8)) + 32;
             String saida1;
@@ -77,26 +77,26 @@ public class Temperatura extends javax.swing.JFrame {
         String pegueEntrada = txtEntrada.getText();
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
-        if (combo1.equals("Fahrenheit") && combo2.equals("Celsius")) {
+        if (combo1.contains("Fahrenheit") && combo2.contains("Celsius")) {
             /*EXISTEM 3 FÓRMULAS DE FAHRENHEIT PARA CELSIUS
 1° -> °C = (°F - 32) * 5/9;
 2° -> °C = (°F - 32) / (9/5);
 3° -> °C = (°F - 32) / 1,8;*/
             double resultado = (convertEntrada - 32) / 1.8;
             txtSaida.setText(df.format(resultado) + " °C");
-        } else if (combo1.equals("Fahrenheit") && combo2.equals("Kelvin")) {
+        } else if (combo1.contains("Fahrenheit") && combo2.contains("Kelvin")) {
             //A FÓRMULA PARA KELVIN É: T(°k) = (T(°F) + 459,67) * 5/9  //(5/9) = 0,5555555555555555
             double resultado = (convertEntrada + constantFahrenheit) * 0.55555555555555555555555555555556;
             txtSaida.setText(df.format(resultado) + " °K");
         }
 
         //SAÍDA GERAL PARA AS OUTRAS TEMPERATURAS         
-        if (combo2.equals("Celsius")) {
+        if (combo2.contains("Celsius")) {
             double resultado = (convertEntrada + constantFahrenheit) * 0.55555555555555555555555555555556;
             String saida1;
             saida1 = ("Em Kelvin: " + df.format(resultado) + " °K");
             txtRes.setText(saida1 + "\n");
-        } else if (combo2.equals("Kelvin")) {
+        } else if (combo2.contains("Kelvin")) {
             double resultado = (convertEntrada - 32) / 1.8;
             String saida1;
             saida1 = ("Em Celsius: " + df.format(resultado) + " °C");
@@ -119,23 +119,23 @@ public class Temperatura extends javax.swing.JFrame {
         double convertEntrada = (double) df.parse(pegueEntrada).doubleValue();
 
         //EXECUÇÃO DO COMANDO
-        if (combo1.equals("Kelvin") && combo2.equals("Celsius")) {
+        if (combo1.contains("Kelvin") && combo2.contains("Celsius")) {
             //A FÓRMULA DE KELVIN PARA CELSIUS É: T(°C) = T(K) - 273,15            
             double resultado = convertEntrada - constantCelsius;
             txtSaida.setText(df.format(resultado) + " °C");
-        } else if (combo1.equals("Kelvin") && combo2.equals("Fahrenheit")) {
+        } else if (combo1.contains("Kelvin") && combo2.contains("Fahrenheit")) {
             //A FÓRMULA DE KELVIN PARA FAHRENHEIT É: T(°F) = T(K) * 9/5 - 459,67
             double resultado = ((convertEntrada * (1.8)) - constantFahrenheit);
             txtSaida.setText(df.format(resultado) + " °F");
         }
 
         //SAÍDA GERAL PARA AS OUTRAS TEMPERATURAS 
-        if (combo2.equals("Celsius")) {
+        if (combo2.contains("Celsius")) {
             double resultado = ((convertEntrada * (1.8)) - constantFahrenheit);
             String saida1;
             saida1 = ("Em Fahrenheit: " + df.format(resultado) + " °F");
             txtRes.setText(saida1 + "\n");
-        } else if (combo2.equals("Fahrenheit")) {
+        } else if (combo2.contains("Fahrenheit")) {
             double resultado = convertEntrada - constantCelsius;
             String saida1;
             saida1 = ("Em Celsius: " + df.format(resultado) + " °C");
@@ -149,26 +149,26 @@ public class Temperatura extends javax.swing.JFrame {
         String cbox1 = comboDe.getSelectedItem().toString();
         String cbox2 = comboPara.getSelectedItem().toString();
 
-        if (cbox1.equals("Celsius") && cbox2.equals("Fahrenheit") || cbox1.equals("Celsius") && cbox2.equals("Kelvin")) {
+        if (cbox1.contains("Celsius") && cbox2.contains("Fahrenheit") || cbox1.contains("Celsius") && cbox2.contains("Kelvin")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Fahrenheit") && cbox2.equals("Celsius") || cbox1.equals("Fahrenheit") && cbox2.equals("Kelvin")) {
+        } else if (cbox1.contains("Fahrenheit") && cbox2.contains("Celsius") || cbox1.contains("Fahrenheit") && cbox2.contains("Kelvin")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
-        } else if (cbox1.equals("Kelvin") && cbox2.equals("Celsius") || cbox1.equals("Kelvin") && cbox2.equals("Fahrenheit")) {
+        } else if (cbox1.contains("Kelvin") && cbox2.contains("Celsius") || cbox1.contains("Kelvin") && cbox2.contains("Fahrenheit")) {
             String temp = comboDe.getSelectedItem().toString();
             comboDe.setSelectedItem(comboPara.getSelectedItem().toString());
             comboPara.setSelectedItem(temp);
         }
 
         String combo1 = comboDe.getSelectedItem().toString();
-        if (combo1.equals("Celsius")) {
+        if (combo1.contains("Celsius")) {
             Celsius();
-        } else if (combo1.equals("Fahrenheit")) {
+        } else if (combo1.contains("Fahrenheit")) {
             Fahrenheit();
-        } else if (combo1.equals("Kelvin")) {
+        } else if (combo1.contains("Kelvin")) {
             Kelvin();
         }
     }
@@ -324,20 +324,20 @@ public class Temperatura extends javax.swing.JFrame {
             }
 
             //CHAMANDO OS MÉTODOS
-            if (combo1.equals("Celsius")) {
+            if (combo1.contains("Celsius")) {
                 try {
                     Celsius();
                 } catch (ParseException ex) {
                     Logger.getLogger(Temperatura.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } else if (combo1.equals("Fahrenheit")) {
+            } else if (combo1.contains("Fahrenheit")) {
                 try {
                     Fahrenheit();
                 } catch (ParseException ex) {
                     Logger.getLogger(Temperatura.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
-            } else if (combo1.equals("Kelvin")) {
+            } else if (combo1.contains("Kelvin")) {
                 try {
                     Kelvin();
                 } catch (ParseException ex) {
