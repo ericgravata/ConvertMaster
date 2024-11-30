@@ -26,7 +26,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 //Atributos (dados das moedas **De Real para Outras)
 //Atualizar valores com base nas cotações dirárias posição dos índices {0,1,2, ...n} = {Dólar, Euro, Libra Esterlina} 
         //COTAÇÕES DIÁRIAS
-        double moedaReal[] = {5.97, 6.31, 7.60, 0.005899, 0.00613};//MOEDAS {DÓLAR, EURO, LIBRA ESTERLINA, PESO ARGENTINO, PESO CHILENO}
+        double moedaReal[] = {5.97, 6.32, 7.60, 0.005899, 0.00613};//MOEDAS {DÓLAR, EURO, LIBRA ESTERLINA, PESO ARGENTINO, PESO CHILENO}
 
         String combo1 = comboDe.getSelectedItem().toString();
         String combo2 = comboPara.getSelectedItem().toString();
