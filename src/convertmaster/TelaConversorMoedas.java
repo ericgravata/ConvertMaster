@@ -26,7 +26,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 //Atributos (dados das moedas **De Real para Outras)
 //Atualizar valores com base nas cotações dirárias posição dos índices {0,1,2, ...n} = {Dólar, Euro, Libra Esterlina} 
         //COTAÇÕES DIÁRIAS
-        double moedaReal[] = {0.1674, 0.1583, 0.1314, 169.0744, 162.9057};//MOEDAS {DÓLAR, EURO, LIBRA ESTERLINA, PESO ARGENTINO, PESO CHILENO}
+        double moedaReal[] = {0.1653, 0.1573, 0.1304, 167.2315, 160.6479};//MOEDAS {DÓLAR, EURO, LIBRA ESTERLINA, PESO ARGENTINO, PESO CHILENO}
 
         String combo1 = comboDe.getSelectedItem().toString();
         String combo2 = comboPara.getSelectedItem().toString();
@@ -101,7 +101,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
     private void DolarToOther() throws ParseException {
 //Atributos (dados das moedas **De Real para Outras)
 //Atualizar valores com base nas cotações dirárias posição dos índices {0,1,2} => {Real, Euro, Libra Esterlina}        
-        double moedaDolar[] = {5.9730, 0.9454, 0.7849, 1010.0000, 973.1500};//MOEDAS {REAL, EURO, LIBRA ESTERLINA}
+        double moedaDolar[] = {6.0450, 0.9515, 0.7891, 1011.5000, 972.0000};//MOEDAS {REAL, EURO, LIBRA ESTERLINA}
 
         String combo1 = comboDe.getSelectedItem().toString();
         String combo2 = comboPara.getSelectedItem().toString();
@@ -175,7 +175,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 //Atributos (dados das moedas **De Real para Outras)
 //Atualizar valores com base nas cotações dirárias posição dos índices {0,1,2} = {Real, Dólar, Libra Esterlina}  
         //COTAÇÕES DIÁRIAS
-        double moedaEuro[] = {6.3164, 1.0575, 0.8301, 1068.0750, 1029.1100};//INDEX DAS MOEDAS {REAL, DÓLAR, LIBRA ESTERLINA, PESO ARGENTINO, PESO CHILENO}
+        double moedaEuro[] = {6.3557, 1.0507, 0.8292, 1062.7831, 1021.2800};//INDEX DAS MOEDAS {REAL, DÓLAR, LIBRA ESTERLINA, PESO ARGENTINO, PESO CHILENO}
 
         String combo1 = comboDe.getSelectedItem().toString();
         String combo2 = comboPara.getSelectedItem().toString();
@@ -247,7 +247,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 
     private void LibraEsterToOther() throws ParseException {
 //Atributos (dados das moedas **De Dólar para outras)
-        double moedaLibraEster[] = {7.6078, 1.2737, 1.2041, 1286.4370, 1239.5000};//MOEDAS {REAL, DÓLAR, EURO, PESO ARGENTINO, PESO CHILENO}    
+        double moedaLibraEster[] = {7.6622, 1.2669, 1.2056, 1281.5705, 1231.4300};//MOEDAS {REAL, DÓLAR, EURO, PESO ARGENTINO, PESO CHILENO}    
         String combo1 = comboDe.getSelectedItem().toString();
         String combo2 = comboPara.getSelectedItem().toString();
 
@@ -319,7 +319,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
         // Atributos (dados das moedas)
         //Variável moedaPesoArgentino tem o fator, por isso multiplicamos.
         //Ex.: {0.0058 é o valor em reais para cada peso, assim para as demais moedas}
-        double moedaPesoArgentino[] = {0.0059, 0.000989, 0.00094, 0.000776, 0.9626}; // //MOEDAS {REAL, DÓLAR, EURO, LIBRA ESTERLINA, PESO CHILENO}
+        double moedaPesoArgentino[] = {0.0060, 0.000988, 0.00094, 0.00078, 0.9605}; // //MOEDAS {REAL, DÓLAR, EURO, LIBRA ESTERLINA, PESO CHILENO}
 
         String combo1 = comboDe.getSelectedItem().toString();
         String combo2 = comboPara.getSelectedItem().toString();
@@ -395,7 +395,7 @@ public class TelaConversorMoedas extends javax.swing.JFrame {
 
     private void PesosChilenoParaOutras() throws ParseException {
         // Atributos (dados das moedas)
-        double moedaChilena[] = {0.00613, 0.001027, 0.000971, 0.000806, 1.0372}; // //MOEDAS {REAL, DÓLAR, EURO, LIBRA ESTERLINA, PESO ARGENTINO}
+        double moedaChilena[] = {0.0062, 0.001027, 0.000977, 0.00081, 1.0385}; // //MOEDAS {REAL, DÓLAR, EURO, LIBRA ESTERLINA, PESO ARGENTINO}
 
         String combo1 = comboDe.getSelectedItem().toString();
         String combo2 = comboPara.getSelectedItem().toString();
